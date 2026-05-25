@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 420 420" role="img" aria-labelledby="title desc">
+  <title id="title">QR code placeholder</title>
+  <desc id="desc">Image temporaire de QR code a remplacer.</desc>
+  <rect width="420" height="420" fill="#ffffff"/>
+  <rect x="28" y="28" width="364" height="364" fill="#ffffff" stroke="#090907" stroke-width="12"/>
+  <g fill="#090907">
+    <path d="M62 62h88v88H62zM270 62h88v88h-88zM62 270h88v88H62z"/>
+    <path d="M86 86h40v40H86zM294 86h40v40h-40zM86 294h40v40H86z" fill="#ffffff"/>
+    <path d="M190 66h32v32h-32zM190 118h32v64h-32zM238 170h32v32h-32zM302 190h32v32h-32zM174 238h64v32h-64zM270 254h32v32h-32zM318 270h40v40h-40zM190 310h32v48h-32zM238 318h48v40h-48zM334 334h24v24h-24z"/>
+  </g>
+  <rect x="174" y="174" width="40" height="40" fill="#ffd43b"/>
+</svg>
