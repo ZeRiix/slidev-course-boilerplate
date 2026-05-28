@@ -1,0 +1,125 @@
+.course-inline-placeholder {
+  margin-top: 14px;
+  border: 1px dashed rgba(var(--color-primary-rgb), 0.45);
+  border-radius: 6px;
+  background: rgba(var(--color-primary-rgb), 0.08);
+  padding: 10px 12px;
+  color: var(--color-muted);
+  font-size: 0.74rem;
+  line-height: 1.35;
+}
+
+.course-download {
+  display: inline-flex;
+  position: absolute;
+  right: var(--space-slide-x);
+  bottom: var(--space-slide-y);
+  z-index: 2;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  margin: 0;
+  border: 1px solid rgba(var(--color-primary-rgb), 0.36);
+  border-radius: 7px;
+  background: var(--color-primary);
+  padding: 10px 14px;
+  color: var(--color-surface);
+  font-size: 0.84rem;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.course-download:hover {
+  background: var(--color-primary-hover);
+  color: var(--color-surface);
+}
+
+.course-download__icon {
+  display: grid;
+  width: 20px;
+  height: 20px;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(var(--color-surface-rgb), 0.18);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.course-hint {
+  margin-top: 22px;
+  border-left: var(--accent-border-width) solid var(--color-primary);
+  background: var(--color-surface);
+  padding: 15px 19px;
+}
+
+.course-hint strong {
+  display: block;
+  margin-bottom: 8px;
+  background: none;
+}
+
+.course-fold {
+  margin: 14px 0 18px;
+  border: var(--border-thin);
+  background: var(--color-surface);
+}
+
+.course-fold summary {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 15px;
+  color: var(--color-text);
+  font-size: 0.76rem;
+  font-weight: 850;
+  line-height: 1.2;
+  list-style: none;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.course-fold summary::-webkit-details-marker {
+  display: none;
+}
+
+.course-fold summary::after {
+  content: "+";
+  display: grid;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  place-items: center;
+  background: var(--color-primary);
+  color: var(--color-surface);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.course-fold[open] summary {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.course-fold[open] summary::after {
+  content: "-";
+}
+
+.course-fold__content {
+  padding: 12px 15px 15px;
+}
+
+.course-fold__content > :first-child {
+  margin-top: 0;
+}
+
+.course-fold__content > :last-child {
+  margin-bottom: 0;
+}
+
+.course-fold__content table {
+  margin: 0;
+}

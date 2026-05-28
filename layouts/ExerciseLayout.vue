@@ -6,6 +6,7 @@ export interface ExerciseFrontmatter {
 	kicker?: string;
 	title?: string;
 	duration?: string;
+	durationLabel?: string;
 	level?: string;
 }
 
@@ -21,7 +22,10 @@ const frontmatter = useFrontmatter<ExerciseFrontmatter>();
 				<h1>{{ frontmatter.title }}</h1>
 			</div>
 
-			<TheDuration :value="frontmatter.duration || '20 min'" />
+			<TheDuration
+				:label="frontmatter.durationLabel"
+				:value="frontmatter.duration || '20 min'"
+			/>
 		</header>
 
 		<article class="course-prose course-exercise__content">

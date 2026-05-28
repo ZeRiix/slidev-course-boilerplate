@@ -1,12 +1,18 @@
 <script setup lang="ts">
-defineProps<{
-	value: string;
-}>();
+withDefaults(
+	defineProps<{
+		label?: string;
+		value: string;
+	}>(),
+	{
+		label: "Estimated duration",
+	},
+);
 </script>
 
 <template>
 	<div class="course-duration">
-		<span>Estimated duration</span>
+		<span>{{ label }}</span>
 
 		<strong>{{ value }}</strong>
 	</div>

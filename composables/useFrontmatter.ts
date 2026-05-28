@@ -10,3 +10,4 @@ export function useFrontmatter<
 
 	return computed(() => $frontmatter as GenericFrontmatter);
 }
+

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useFrontmatter } from "../composables/useFrontmatter";
+import { useSlideAsset } from "../composables/useSlideAsset";
 
 export interface QrFrontmatter {
 	kicker?: string;
@@ -10,6 +11,7 @@ export interface QrFrontmatter {
 }
 
 const frontmatter = useFrontmatter<QrFrontmatter>();
+const qr = useSlideAsset(() => frontmatter.value.qr || "/assets/qr-code.svg");
 </script>
 
 <template>
@@ -27,7 +29,7 @@ const frontmatter = useFrontmatter<QrFrontmatter>();
 		<main class="course-qr__body">
 			<img
 				class="course-qr__image"
-				:src="frontmatter.qr || '/assets/qr-code.svg'"
+				:src="qr"
 			/>
 
 			<a

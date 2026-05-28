@@ -6,7 +6,7 @@ export interface SectionFrontmatter {
 	part?: string;
 	title?: string;
 	subtitle?: string;
-	variant?: "dark" | "yellow";
+	variant?: "dark" | "primary";
 }
 
 const frontmatter = useFrontmatter<SectionFrontmatter>();

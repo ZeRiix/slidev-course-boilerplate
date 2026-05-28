@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useFrontmatter } from "../composables/useFrontmatter";
+import { useSlideAsset } from "../composables/useSlideAsset";
 
 export interface CoverFrontmatter {
 	logo?: string;
@@ -11,6 +12,7 @@ export interface CoverFrontmatter {
 }
 
 const frontmatter = useFrontmatter<CoverFrontmatter>();
+const logo = useSlideAsset(() => frontmatter.value.logo || "/assets/logo.svg");
 </script>
 
 <template>
@@ -18,7 +20,7 @@ const frontmatter = useFrontmatter<CoverFrontmatter>();
 		<div class="course-cover__top">
 			<img
 				class="course-cover__logo"
-				:src="frontmatter.logo || '/assets/logo.svg'"
+				:src="logo"
 			/>
 
 			<span class="course-kicker">{{ frontmatter.kicker || 'Programming' }}</span>

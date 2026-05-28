@@ -7,7 +7,7 @@
   },
   "private": true,
   "scripts": {
-    "build": "slidev build",
+    "build": "slidev build --base ./",
     "dev": "slidev --open",
     "export": "slidev export",
     "test:types": "vue-tsc -p tsconfig.json",
@@ -17,7 +17,7 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
-    "@duplojs/utils": "1.8.4",
+    "@duplojs/utils": "1.8.5",
     "@slidev/cli": "^52.15.2",
     "slidev-theme-neversink": "^0.4.1",
     "vue": "^3.5.33"
