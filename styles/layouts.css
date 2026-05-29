@@ -275,8 +275,6 @@
   width: 100%;
   flex: 1;
   min-height: 0;
-  border: var(--border-thin);
-  background: var(--color-surface);
 }
 
 .course-visual__image {
@@ -290,6 +288,8 @@
 .course-visual__placeholder {
   display: grid;
   place-items: center;
+  border: var(--border-thin);
+  background: var(--color-surface);
   padding: 26px;
   text-align: center;
 }
