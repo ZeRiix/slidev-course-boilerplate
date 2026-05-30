@@ -19,6 +19,7 @@
     "components/**/*.vue",
     "composables/**/*.ts",
     "layouts/**/*.vue",
+    "pages/**/*.vue",
     "global-bottom.vue",
   ],
 }

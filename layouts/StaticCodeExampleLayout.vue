@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed, useSlots } from "vue";
 import { useFrontmatter } from "../composables/useFrontmatter";
 
 export interface StaticCodeFrontmatter {
@@ -9,6 +10,8 @@ export interface StaticCodeFrontmatter {
 }
 
 const frontmatter = useFrontmatter<StaticCodeFrontmatter>();
+const slots = useSlots();
+const hasNote = computed(() => Boolean(slots.note));
 </script>
 
 <template>
@@ -26,12 +29,18 @@ const frontmatter = useFrontmatter<StaticCodeFrontmatter>();
 			</p>
 		</header>
 
-		<div class="course-code__grid">
+		<div
+			class="course-code__grid"
+			:class="!hasNote ? 'course-code__grid--single' : ''"
+		>
 			<div class="course-code__block">
 				<slot />
 			</div>
 
-			<aside class="course-code__note">
+			<aside
+				v-if="hasNote"
+				class="course-code__note"
+			>
 				<slot name="note" />
 			</aside>
 		</div>
